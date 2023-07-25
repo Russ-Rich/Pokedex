@@ -17,9 +17,10 @@ let pokemonList = [
 	},
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-	let pokemonName = pokemonList[i].name;
-	let pokemonHeight = pokemonList[i].height;
+// New forEach() loop
+pokemonList.forEach(function(pokemon) {
+	let pokemonName = pokemonList.name;
+	let pokemonHeight = pokemonList.height;
 
 	// Initializes output message with name and height
 	let outputMessage = pokemonName + " (height: " + pokemonHeight + ")";
@@ -32,4 +33,5 @@ for (let i = 0; i < pokemonList.length; i++) {
 
 	// Whether the Pokemon is big or not, write the output message to the web page
 	document.write(outputMessage + "<br>");
-}
+});
+
