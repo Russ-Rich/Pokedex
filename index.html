@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Hello, world!</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0/modern-normalize.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
-  <link rel="icon" href="favicon.png">
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <script src="JS/scripts.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="CSS/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+		<link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+		<title>Pokemon List</title>
+	</head>
+	<body>
+		<h1>Pokemon List</h1>
+    <!-- Header section containing navigation links -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Pokemon</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+		<!-- Input field where user can enter a new pokemon's name and submit it -->
+		<form class="add-pokemon-form">
+			<input type="text" class="pokemon-name" placeholder="Enter Pokemon's name" />
+			<button class="add-pokemon">Add Pokemon</button>
+			<!-- Div that will be populated by API data once loaded from server side  -->
+			<div class="pokemon-data"></div>
+		</form>
+
+		<!-- Empty unordered list to populate with Pokemon -->
+		<ul class="pokemon-list"></ul>
+		<!-- Footer section containing copyright information-->
+		<footer>
+			<h2>Created by Russ Richards</h2>
+			<br />
+			<a href="#">Back to top</a>
+		</footer>
+
+		<!-- Link to the JavaScript file -->
+		<script src="JS/scripts.js"></script>
+	</body>
 </html>

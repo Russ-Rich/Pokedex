@@ -1,0 +1,41 @@
+/* Styling for button elements in the Pokemon list */
+.button-class {
+  background-color: #4caf50;
+  /* Button color */
+  border: none;
+  /* No border */
+  color: white;
+  /* Text color */
+  padding: 15px 32px;
+  /* Space around text */
+  text-align: center;
+  /* Centered text */
+  text-decoration: none;
+  /* No underlines or overlines */
+  display: inline-block;
+  /* Allows setting of width and height */
+  font-size: 16px;
+  /* Size of text */
+  margin: 4px 2px;
+  /* Space around the button */
+  cursor: pointer;
+  /* Changes the cursor when hovering over button */
+  border-radius: 12px;
+  /* Rounded corners */
+}
+
+/* Style applied only on active buttons (when clicked)*/
+.button-class:active {
+  background-color: #3d7dca;
+  /* When clicked background color changes to blue */
+  color: #ffcb05;
+  /* When clicked text color changes to yellow */
+}
+
+/* When hovering over the button */
+.button-class:hover {
+  background-color: #3d7dca;
+  /* When hovering over the button background color changes to blue */
+  color: #ffcb05;
+  /* When hovering over the button text color changes to yellow */
+}
