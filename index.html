@@ -10,38 +10,37 @@
 		<title>Pokemon List</title>
 	</head>
 	<body>
-		<h1>Pokemon List</h1>
-		<!-- Header section containing navigation links -->
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Pokemon</a></li>
-					<li><a href="#">About</a></li>
-				</ul>
-			</nav>
-		</header>
 
-		<!-- Input field where user can enter a new pokemon's name and submit it -->
-		<form class="add-pokemon-form">
-			<input type="text" class="pokemon-name" placeholder="Enter Pokemon's name" />
-			<button class="add-pokemon">Add Pokemon</button>
-			<!-- Div that will be populated by API data once loaded from server side  -->
-			<div class="pokemon-data"></div>
-		</form>
+		<body>
+			<h1>My Pokemon List</h1> <!-- This is the main title of your webpage -->
+			
+			<!-- This is an unordered list that will be populated by your JavaScript code with the list of Pokemon -->
+			<ul class="pokemon-list"></ul>
 
-		<!-- Empty unordered list to populate with Pokemon -->
-		<ul class="pokemon-list"></ul>
-		<!-- Footer section containing copyright information-->
-		<footer>
-			<h2>Created by Russ Richards</h2>
-			<br />
-			<a href="#">Back to top</a>
-		</footer>
+			<!-- Modal container that will be populated with Pokemon details when a Pokemon is clicked. Initially it's hidden, and will be shown by your JavaScript code when needed -->
+			<div id="modal-container">
+				<!-- Actual modal that contains the Pokemon details -->
+				<div class="modal">
+					<!-- This is the button that will close the modal when clicked -->
+					<button class="modal-close">Close</button>
+					<!-- This paragraph will contain the Pokemon height -->
+					<p class="pokemon-height"></p>
+					<!-- This div will contain the Pokemon image -->
+					<div class="img-container">
+						<img src class="pokemon-image" alt="images of pokemon">
+					</div>
+				</div>
+			</div>
 
-		<!-- Link to the JavaScript file -->
-		<script src="JS/promise-polyfill.js"></script>
-		<script src="JS/fetch-polyfill.js"></script>
-		<script src="JS/scripts.js"></script>
-	</body>
-</html>
+			<footer>
+				<h2>Created by Russ Richards</h2>
+				<br />
+				<a href="#">Back to top</a>
+			</footer>
+
+			<!-- Link to the JavaScript file -->
+			<script src="JS/promise-polyfill.js"></script>
+			<script src="JS/fetch-polyfill.js"></script>
+			<script src="JS/scripts.js"></script>
+		</body>
+	</html>
