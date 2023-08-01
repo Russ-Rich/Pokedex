@@ -100,9 +100,9 @@ let pokemonRepository = (function () {
 		modalContainer.appendChild(modal);
 		modalContainer.classList.add("is-visible");
 
-		var el = document.querySelector(".modal");
+		const el = document.querySelector(".modal");
 
-		swipedetect(el, function (swipedir) {
+		functionswipedir(el, function (swipedir) {
 			if (swipedir == "left") {
 				console.log("You just swiped left!");
 				// Add the logic for previous pokemon
