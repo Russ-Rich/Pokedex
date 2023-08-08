@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="CSS/style.css" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="A simple web app that displays a list of Pokémon" />
+		<meta name="keywords" content="HTML, CSS, JavaScript, jQuery, Bootstrap, Pokémon" />
+		<meta name="Russ" content="Russ's Assignment" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 
-		<link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link href="CSS/style.css" rel="stylesheet" />
+
 		<title>Pokemon List</title>
 	</head>
+
 	<body>
+		<!-- Navbar -->
 
-		<body>
-			<h1>My Pokemon List</h1> <!-- This is the main title of your webpage -->
-			
-			<!-- This is an unordered list that will be populated by your JavaScript code with the list of Pokemon -->
-			<ul class="pokemon-list"></ul>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="https://www.pokemon.com/us/pokedex/">Pokemon List</a>
 
-			<!-- Modal container that will be populated with Pokemon details when a Pokemon is clicked. Initially it's hidden, and will be shown by your JavaScript code when needed -->
-			<div id="modal-container">
-				<!-- Actual modal that contains the Pokemon details -->
-				<div class="modal">
-					<!-- This is the button that will close the modal when clicked -->
-					<button class="modal-close">Close</button>
-					<!-- This paragraph will contain the Pokemon height -->
-					<p class="pokemon-height"></p>
-					<!-- This div will contain the Pokemon image -->
-					<div class="img-container">
-						<img src class="pokemon-image" alt="images of pokemon">
+			<!-- Navbar links -->
+
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+
+				<!-- Add more nav items here -->
+			</ul>
+		</nav>
+
+		<!-- Pokemon List -->
+
+		<ol
+			class="list-group pokemon-list"
+			data-url="https://pokeapi.co/api/v2/pokemon/"
+			data-offset="0"
+			data-limit="20"
+			data-total="964"
+			data-next="https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
+			data-previous="null"
+			data-loading="false"
+			data-loading-text="Loading more Pokemon..."
+			data-error-text="Error loading Pokemon. Please try again later."
+			data-no-more-text="No more Pokemon to load."></ol>
+
+		<!-- Bootstrap Modal -->
+		<div
+			class="modal fade"
+			id="pokemonModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="pokemonModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="pokemonModalLabel">Pokemon Details</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!-- Pokémon details will be dynamically added here using JavaScript -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">
+							Close
+						</button>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<footer>
-				<h2>Created by Russ Richards</h2>
-				<br />
-				<a href="#">Back to top</a>
-			</footer>
-
-			<!-- Link to the JavaScript file -->
-			<script src="JS/promise-polyfill.js"></script>
-			<script src="JS/fetch-polyfill.js"></script>
-			<script src="JS/scripts.js"></script>
-		</body>
-	</html>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="JS/scripts.js"></script>
+		<!-- Replace with the path to your JavaScript file -->
+	</body>
+</html>
