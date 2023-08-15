@@ -7,9 +7,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 .pokeball-icon {
   width: 30px;
   height: 30px;
-  margin-right: 10px; /* if you want some space next to it */
+  margin-right: 10px; 
 }
-
 
 body {
   font-family: Arial, sans-serif;
