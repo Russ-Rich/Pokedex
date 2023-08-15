@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="A simple web app that displays a list of Pokémon" />
-		<meta name="keywords" content="HTML, CSS, JavaScript, jQuery, Bootstrap, Pokémon" />
-		<meta name="Russ" content="Russ's Assignment" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple web app that displays a list of Pokémon" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Pokémon" />
+    <meta name="author" content="Russ's Assignment" />
+    <title>Pokemon List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/styles.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.pokemon.com/us/pokedex/">Pokemon List</a>
+      <img src="img/pokeball-png-45332.png" alt="Pokéball" class="pokeball-icon">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+							
+                <div class="nav-container">
+									
+                    <a class="nav-link" href="#" id="homeButton">Home</a>
+                </div>
+            </li>
+            
+						
 
-		<link
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-			rel="stylesheet" />
-		<link href="CSS/style.css" rel="stylesheet" />
+        </ul>
+    </nav>
 
-		<title>Pokemon List</title>
-	</head>
+    <!-- Pokemon List -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <input type="text" id="searchBar" placeholder="Search" class="form-control mb-3" />
+            </div>
+        </div>
+        <div class="row pokemon-list"></div>
+    </div>
 
-	<body>
-		<!-- Navbar -->
+    <!-- Bootstrap Modal -->
+    <div
+        class="modal fade"
+        id="pokemonModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="pokemonModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pokemonModalLabel">Pokemon Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Pokémon details will be dynamically added here using JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="https://www.pokemon.com/us/pokedex/">Pokemon List</a>
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-			<!-- Navbar links -->
-
-			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home</a>
-				</li>
-
-				<!-- Add more nav items here -->
-			</ul>
-		</nav>
-
-		<!-- Pokemon List -->
-
-		<ol
-			class="list-group pokemon-list"
-			data-url="https://pokeapi.co/api/v2/pokemon/"
-			data-offset="0"
-			data-limit="20"
-			data-total="964"
-			data-next="https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
-			data-previous="null"
-			data-loading="false"
-			data-loading-text="Loading more Pokemon..."
-			data-error-text="Error loading Pokemon. Please try again later."
-			data-no-more-text="No more Pokemon to load."></ol>
-
-		<!-- Bootstrap Modal -->
-		<div
-			class="modal fade"
-			id="pokemonModal"
-			tabindex="-1"
-			role="dialog"
-			aria-labelledby="pokemonModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="pokemonModalLabel">Pokemon Details</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<!-- Pokémon details will be dynamically added here using JavaScript -->
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">
-							Close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<script src="JS/scripts.js"></script>
-		<!-- Replace with the path to your JavaScript file -->
-	</body>
+    <!-- Custom JS -->
+    <script src="dist/scripts.min.js"></script>
+</body>
 </html>

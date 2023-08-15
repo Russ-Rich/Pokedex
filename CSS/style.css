@@ -1,0 +1,105 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.pokeball-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; /* if you want some space next to it */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5dc1d;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #f1356d;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #000000 !important;
+}
+
+.navbar .nav-item.active .nav-link {
+  border-bottom: 2px solid #000000;
+}
+
+/* Container styles */
+.container {
+  padding: 20px;
+}
+
+/* Search bar styles */
+#searchBar {
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* Pokemon list styles */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pokemon-item {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(33.333% - 20px);
+}
+
+.pokemon-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modal styles */
+.modal-content {
+  position: relative;
+}
+
+.modal-header {
+  background: #f1356d;
+  color: #fff;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* Button styles */
+.btn-secondary {
+  background-color: #f1356d;
+  border: none;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #f45f86;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .pokemon-item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pokemon-item {
+    flex-basis: 100%;
+  }
+}
