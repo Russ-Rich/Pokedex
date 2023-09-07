@@ -1,79 +1,67 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A simple web app that displays a list of Pokémon" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, Pokémon" />
-    <meta name="author" content="Russ's Assignment" />
-    <title>Pokemon List</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="dist/styles.min.css" rel="stylesheet" />
-</head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A simple web app that displays a list of Pokémon" name="description"/>
+<meta content="HTML, CSS, JavaScript, Pokémon" name="keywords"/>
+<meta content="Russ's Assignment" name="author"/>
+<title>Pokemon List</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="dist/styles.min.css" rel="stylesheet"/>
+
 <body>
-    <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="https://www.pokemon.com/us/pokedex/">Pokemon List</a>
-      <img src="img/pokeball-png-45332.png" alt="Pokéball" class="pokeball-icon">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-							
-                <div class="nav-container">
-									
-                    <a class="nav-link" href="#" id="homeButton">Home</a>
-                </div>
-            </li>
-            
-						
-
-        </ul>
-    </nav>
-
-    <!-- Pokemon List -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <input type="text" id="searchBar" placeholder="Search" class="form-control mb-3" />
-            </div>
-        </div>
-        <div class="row pokemon-list"></div>
-    </div>
-
-    <!-- Bootstrap Modal -->
-    <div
-        class="modal fade"
-        id="pokemonModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="pokemonModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="pokemonModalLabel">Pokemon Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Pokémon details will be dynamically added here using JavaScript -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+<a class="navbar-brand" href="https://www.pokemon.com/us/pokedex/" tabindex="0">Pokemon List</a>
+<img alt="Pokeball Icon" class="pokeball-icon" loading="lazy" src="img/pokeball-png-45332.png"/>
+<ul class="navbar-nav">
+<li class="nav-item active">
+<div class="nav-container">
+<a class="nav-link" href="#" id="homeButton">Home</a>
+</div>
+</li>
+</ul>
+</nav>
+<!-- Pokemon List -->
+<main>
+<div class="row">
+<div class="col-12">
+<input class="form-control mb-3" id="searchBar" placeholder="Search" type="text"/>
+</div>
+</div>
+<div class="row pokemon-list"></div>
+</main>
+<!-- Bootstrap Modal -->
+<div aria-hidden="true" aria-labelledby="pokemonModalLabel" class="modal fade" id="pokemonModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="pokemonModalLabel">Pokemon Details</h5>
+<button aria-label="Toggle Pokemon Details" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<!-- Pokémon details will be dynamically added here using JavaScript -->
+</div>
+<div class="modal-footer">
+<button aria-label="Toggle Pokemon Details" class="btn btn-secondary" data-dismiss="modal" type="button">
                         Close
                     </button>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- jQuery, Popper.js, and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Custom JS -->
 
-    <!-- jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="dist/scripts.min.js"></script>
 
-    <!-- Custom JS -->
-    <script src="dist/scripts.min.js"></script>
 </body>
 </html>
